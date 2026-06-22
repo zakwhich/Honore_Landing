@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Honore Home, a warm and welcoming landing page for the home network."
+    />
+    <title>Honore Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260615-2119" />
+    <script src="app.js?v=20260615-2119" defer></script>
+  </head>
+  <body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="Honore Home">
+        <span class="wordmark-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>Honore Home</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#services">Services</a>
+      </nav>
+
+      <a class="icon-button" href="/admin.html" aria-label="Open admin portal">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z" />
+          <path d="M19.4 15a1.8 1.8 0 0 0 .4 2l.1.1-2.8 2.8-.1-.1a1.8 1.8 0 0 0-2-.4 1.8 1.8 0 0 0-1.1 1.7v.2H10v-.2a1.8 1.8 0 0 0-1.1-1.7 1.8 1.8 0 0 0-2 .4l-.1.1L4 17.1l.1-.1a1.8 1.8 0 0 0 .4-2 1.8 1.8 0 0 0-1.7-1.1h-.2V10h.2a1.8 1.8 0 0 0 1.7-1.1 1.8 1.8 0 0 0-.4-2L4 6.8 6.8 4l.1.1a1.8 1.8 0 0 0 2 .4A1.8 1.8 0 0 0 10 2.8v-.2h3.9v.2A1.8 1.8 0 0 0 15 4.5a1.8 1.8 0 0 0 2-.4l.1-.1 2.8 2.8-.1.1a1.8 1.8 0 0 0-.4 2 1.8 1.8 0 0 0 1.7 1.1h.2v3.9h-.2a1.8 1.8 0 0 0-1.7 1.1Z" />
+        </svg>
+      </a>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="greeting">
+        <div class="hero-copy-wrap">
+          <p class="eyebrow" id="current-date">Welcome home</p>
+          <h1 id="greeting">Good evening,<br />Honore family</h1>
+          <p class="hero-copy">Everything at home is running smoothly.</p>
+          <div class="status-pill">
+            <span class="status-label" id="overall-status"><span class="status-dot"></span>Checking services</span>
+          </div>
+        </div>
+
+        <div class="home-graphic" aria-hidden="true">
+          <img src="/assets/mockup-house.png?v=20260615-1722" alt="" />
+        </div>
+      </section>
+
+      <section class="network-summary" aria-live="polite">
+        <span id="online-count">Loading services</span>
+        <span id="last-checked">Checking now</span>
+      </section>
+
+      <section class="services-section" id="services" aria-labelledby="services-heading">
+        <article class="featured-card" id="featured-card" aria-live="polite"></article>
+
+        <div class="services-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Around the house</p>
+              <h2 id="services-heading">Services</h2>
+            </div>
+          </div>
+          <div class="service-grid" id="service-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Honore Home</span>
+      <span>Everything in its place.</span>
+    </footer>
+  </body>
+</html>

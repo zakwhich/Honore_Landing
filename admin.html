@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Admin | Honore Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20260615-2132" />
+    <link rel="stylesheet" href="admin.css?v=20260615-2132" />
+    <script src="admin.js?v=20260615-2132" defer></script>
+  </head>
+  <body class="admin-body">
+    <header class="site-header">
+      <a class="wordmark" href="/">
+        <span class="wordmark-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Honore Home</span>
+      </a>
+      <span class="admin-badge">Admin</span>
+      <a class="admin-home-link" href="/">View homepage</a>
+    </header>
+
+    <main class="admin-main">
+      <section class="login-panel" id="login-panel">
+        <p class="eyebrow">Private settings</p>
+        <h1>Welcome back.</h1>
+        <p>Sign in to update the places Honore Home points to.</p>
+        <form id="login-form">
+          <label>Username<input name="username" autocomplete="username" required /></label>
+          <label>Password<input name="password" type="password" autocomplete="current-password" required /></label>
+          <button class="primary-button" type="submit">Sign in</button>
+          <p class="form-message" id="login-message" role="status"></p>
+        </form>
+      </section>
+
+      <section class="admin-workspace" id="admin-workspace" hidden>
+        <div class="admin-intro">
+          <div>
+            <p class="eyebrow">Service directory</p>
+            <h1>Keep home connected.</h1>
+            <p>Update each destination and optional logo. Bare homelab addresses like 192.168.1.1 are saved as http:// links automatically. Status and response time are measured live while the homepage is open.</p>
+          </div>
+          <button class="quiet-button" id="logout-button" type="button">Sign out</button>
+        </div>
+
+        <form id="services-form">
+          <div class="admin-toolbar">
+            <p class="form-message" id="save-message" role="status"></p>
+            <button class="quiet-button" id="add-service-button" type="button">Add service</button>
+            <button class="primary-button save-button" id="save-button" type="submit">Save changes</button>
+          </div>
+          <div class="admin-service-list" id="admin-service-list"></div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

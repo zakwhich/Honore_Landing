@@ -1,0 +1,17 @@
+services:
+  honore-home:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: honore-home
+    restart: unless-stopped
+    environment:
+      HONORE_ADMIN_USERNAME: admin
+      HONORE_ADMIN_PASSWORD: admin
+    ports:
+      - "8080:8080"
+    volumes:
+      - honore-data:/data
+
+volumes:
+  honore-data:
